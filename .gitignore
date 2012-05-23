@@ -1,12 +1,839 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
+#include<stdio.h>
+#include<conio.h>
+#include<windows.h>
+#include<stdlib.h>
+#include <time.h>
 
-# Compiled Dynamic libraries
-*.so
+main(){
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+float cs,ptsj,ptsn, op, sorteio1,sorteio2,sorteio3,fixas;
+int posj, rg, rotacao;
+posj = 1;
+srand(time(NULL));
+  
+printf("      #                                          #     #                 \n");
+printf("      #  ####   ####   ####     #####    ##      #     # # #####    ##   \n");
+printf("      # #    # #    # #    #    #    #  #  #     #     # # #    #  #  #  \n");
+printf("      # #    # #      #    #    #    # #    #    #     # # #    # #    # \n");
+printf("#     # #    # #  ### #    #    #    # ######     #   #  # #    # ###### \n");
+printf("#     # #    # #    # #    #    #    # #    #      # #   # #    # #    # \n");
+printf(" #####   ####   ####   ####     #####  #    #       #    # #####  #    # \n");
+
+    getch();
+    system("cls");
+
+ /// comeco comando matriz
+char mat[6][6];
+      int i = 0, j = 0;
+      for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              mat[i][j] = '.';      
+             }      
+      }
+ /* nao precisa disso, ja se repete em kda if
+ 
+      for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+ //             printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+      }
+      
+    /// final comando matriz
+ */
+
+do
+{
+
+
+if(posj==1){
+        mat[0][0]='X';
+               for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n");} 
+  printf("\nParabens, voce ganhou um bonus para comecar o jogo ! ! !\n");
+    ptsj+=20000;
+  printf("\nVoce acabou de ganhar R$ 20.000!\n\n");
+
+    
+    getch();
+    system("cls");
+}
+if(posj==2){
+                        mat[0][1]='X';
+                 for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nQue pena ! Sua sogra bateu o carro e sobreviveu.\n");
+    ptsj-=6000;
+  printf("E voce pagara o concerto do carro! Isso lhe custara R$6.000\n\n");
+      
+
+    getch();
+   system("cls");
+}
+if(posj==3){
+        mat[0][2]='X';
+                 for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nDroga ! Seu iPhone caiu no chao e quebrou !\n");
+  printf("Deseja Comprar Outro? \n");
+  printf("1 = Sim, 2 = Nao: \n");
+  scanf("%f",&op);
+    if(op==1){
+      ptsj-=2000;
+    printf("\nEle te custou R$2.000\n");
+      }
+    else{
+      printf("\nSeu pao duro !\n\n");
+      }
+    
+
+    getch();
+    system("cls");
+}
+if(posj==4){
+        mat[0][3]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce foi o sorteado no Hipercap !\n");
+    ptsj+=7000;
+  printf("Voce ganhou R$7.000 ! Titulo de capitalizacao popular !\n\n");
+
+    getch();
+    system("cls");
+}
+if(posj==5){
+        mat[0][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSua casa foi invadida por mendigos sem teto !\n");
+    ptsj-=1200;
+  printf("Pense melhor na proxima vez que deixar sua porta aberta. Voce perdeu R$1.200\n\n");
+
+    getch();
+    system("cls");
+}
+if(posj==6){
+    mat[0][5]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce ganhou uma rodada no Poker em Las Vegas ! \n");
+    ptsj+=1400;
+  printf("Voce e um otimo jogador ! Acabou de ganhar R$1.400 !\n\n");
+    
+    getch();
+    system("cls");
+}
+
+if(posj==7){
+    mat[1][0]='X';
+                    for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce recebeu o pagamento!\n");
+  printf("Foram Creditados R$6.000 para sua conta!\n\n");
+    ptsj+=6000;
+      
+    getch();
+    system("cls"); 
+}
+
+if(posj==8){
+    mat[1][1]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSua avo morreu e deixou uma heranca !\n");
+    ptsj+=8000;
+  printf("Que velhinha gente boa ! Deixou R$8.000 so para voce !\n\n");
+    
+    getch();
+    system("cls");
+}
+if(posj==9){
+    mat[1][2]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce ganhou na Telecena ! \n");
+    ptsj+=3000;
+  printf("MAAA OEEEE ! R$3.000 em Barras de ouro, que valem mais do que dinheirooo !\n\n");
+    
+    getch();
+    system("cls");
+}
+if(posj==10){
+    mat[1][3]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nPicharam o muro da sua casa, voce precisa pintar novamente !\n\n");
+    ptsj-=500;
+  printf("O pintor cobrou R$500 pelo servico\n");
+    
+    getch();
+    system("cls");
+}
+// if 11 = cacaniquel
+
+if(posj==12){
+    mat[1][5]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSeu cachorro de 3 pernas morreu ! \n");
+  printf("Deseja fazer um enterro digno? 1 = Sim, 2 = Nao: \n");
+  scanf("%f", &op);
+    if(op == 1){
+      ptsj-=1000;
+    printf("Foi debitado R$1.000 de sua conta para o enterro\n");
+    printf("Que ele descance em paz !\n");
+    }
+    else{
+      printf("A alma do seu cachorro vai te assombrar pelo resto da vida !\n\n");
+    }  
+    
+    getch();
+    system("cls");
+}  
+
+if(posj==13){
+      mat[2][0]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nJuiz deu ganho de causa de um processo contra o estado\n");
+  printf("e voce ganhou R$4.000 !\n\n");
+    ptsj+=4000;
+       
+    getch();
+    system("cls");
+}
+
+if(posj==14){
+    mat[2][1]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSeu carro quebrou e teve que chamar um guincho\n");
+  printf("Isso te custou R$1.000 !\n\n");
+    ptsj-=1000;
+      
+    getch();
+    system("cls");
+}
+if(posj==15){
+    mat[2][2]='X';
+                    for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSeu filho nasceu ! mas voce nao vai receber presentes\n");
+  printf("e ainda teve que pagar R$2.000 para as despesas do Hospital\n\n");
+    ptsj-=2000;
+      
+    getch();
+    system("cls");
+}
+
+if(posj==16){
+    mat[2][3]='X';
+                    for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce recebeu o pagamento!\n");
+  printf("Foram Creditados R$6.000 para sua conta!\n\n");
+    ptsj+=6000;
+      
+    getch();
+    system("cls");
+}
+
+if(posj==17){
+    mat[2][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSua casa sofreu uma enchente ! E perdeu os moveis e eletrodomesticos\n");
+    ptsj-=4500;
+  printf("Que pena, perdeu R$4.500 na enchente !\n\n");
+    
+    getch();
+    system("cls");
+}
+if(posj==18){
+    mat[2][5]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce comprou uma casa na praia\n");
+    ptsj-=15000;
+  printf("Pague R$15.000 !\n\n");
+    
+    getch();
+    system("cls");
+}
+if(posj==19){
+    mat[3][0]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nO Policial te parou e voce esta com a carteira vencida !\n");
+    printf("Deseja pagar a multa ou tentar fugir?\n");
+  printf("1 = Pagar, 2 = Fugir\n");
+  scanf("%f", &op);
+  if(op == 1){
+    ptsj-=1000;
+  printf("Voce pagou a multa de R$1.000 e foi liberado\n");
+    }
+    else{
+      ptsj-=5000;
+  printf("Voce tentou fugir e foi pego, por causa disso foi multado em R$5.000 !\n\n");
+    }
+    
+    getch();
+    system("cls");
+}
+if(posj==20){
+    mat[3][1]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nHoje eh seu dia de sorte !\n");
+  printf("Voce encontrou uma bolsa com R$10.000 em dinheiro !\n\n");
+    ptsj+=10000;
+    
+    getch();
+    system("cls");
+}
+if(posj==21){
+    mat[3][2]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nAte que enfim sua Sogra morreu !\n");
+  printf("Mas a FD* so deixou despesas ! Voce perdeu R$15.000\n\n");
+    ptsj-=15000;
+    
+    getch();
+    system("cls");
+}
+if(posj==22){
+    mat[3][3]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce Apostou R$2.500 em uma corrida de cavalo !\n");
+  printf("E duplicou seu dinheiro !\n");
+  printf("Parabens voce ganhou R$5.000 !\n\n");
+    ptsj+=5000;
+    
+    getch();
+    system("cls");
+}
+if(posj==23){
+        mat[3][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce atropelou uma familia de Orangotangos vermelhos !\n");
+  printf("E o Ibama  te multou em R$6.000\n\n");
+    ptsj-=6000;
+
+    getch();
+    system("cls");
+}
+if(posj==24){
+        mat[3][5]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nHoje eh Aniversario de seu filho !\n");
+  printf("Voce recebeu R$2.000\n\n");
+    ptsj+=2000;
+
+    getch();
+    system("cls");
+}
+if(posj==25){
+    mat[4][0]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nChegou o dia do lancamento do Iphone 5 !\n");
+  printf("E voce foi um dos primeiros a comprar ! Pagou R$3.000\n\n");
+    ptsj-=3000;
+    
+    getch();
+    system("cls");
+}
+if(posj==26){
+     mat[4][1]='X';
+                    for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n");
+    } 
+  printf("\nVoce recebeu o pagamento!\n");
+  printf("Foram Creditados R$6.000 para sua conta!\n\n");
+    ptsj+=6000; 
+
+    getch();
+    system("cls");
+}
+if(posj==27){
+    mat[4][2]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce mandou seu carro para fazer uma revisao !\n");
+  printf("Pague R$4.000\n\n");
+    ptsj-=4000;
+    
+    getch();
+    system("cls");
+}
+if(posj==28){
+    mat[4][3]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSua filha nasceu ! voce ganhou R$2.000 de presente\n\n");
+    ptsj+=2000;
+    
+    getch();
+    system("cls");
+}
+if(posj==29){
+    mat[4][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nSua fazenda foi invadida pelo MST !\n");
+  printf("E colocaram fogo em toda lavoura ! voce perdeu R$20.000\n\n");
+    ptsj-=20000;
+    
+    getch();
+    system("cls");
+}
+
+if(posj==30){
+    mat[4][5]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce nao pagou seus impostos em dia !\n");
+    ptsj-=1200;
+  printf("O Governo confiscou R$1.200 de sua conta\n\n");
+   
+    getch();
+    system("cls");
+}
+// comeco caca niquel
+if((posj==11)||(posj==37)){
+  
+    mat[1][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+
+srand(time(NULL));
+rg=0;
+fixas=0;
+sorteio1=0;
+sorteio2=0;
+sorteio3=0;
+rotacao =0;
+
+
+sorteio1=rand()%5;
+sorteio2=rand()%5;
+sorteio3=rand()%5;
+
+{
+printf("\n /===============\\ ");
+printf("\n / Caca niquel LUIZ \\\n");
+printf("|====================|\n");
+printf("|####################|\n");
+printf("|||| ||| ||| ||||\n");
+printf("||||/\\|||/*\\|||/*\\||||\n", sorteio1, sorteio2, sorteio3);
+printf("|||| ||| ||| ||||\n");
+printf("|####################|\n");
+printf("|--------------------|\n");
+printf("|**Dinheiroooooooo***|\n");
+printf("|#########%d##########|\n",ptsj);
+printf("|--------------------|\n");
+getch();
+system("cls");
+
+//
+    mat[1][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+//
+
+printf("\n /================\\ ");
+printf("\n / Caca niquel LUIZ \\\n");
+printf("|====================|\n");
+printf("|####################|\n");
+printf("|||| ||| ||| ||||\n");
+printf("|||| %.0f|||/*\\|||/*\\||||\n", sorteio1, sorteio2, sorteio3);
+printf("|||| ||| ||| ||||\n");
+printf("|####################|\n");
+printf("|--------------------|\n");
+printf("|**Dinheiroooooooo***|\n");
+printf("|#########%d##########|\n",ptsj);
+printf("|--------------------|\n");
+getch();
+system("cls");
+
+//
+    mat[1][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+//
+
+printf("\n /================\\ ");
+printf("\n / Caça niquel LUIZ \\\n");
+printf("|====================|\n");
+printf("|####################|\n");
+printf("|||| ||| ||| ||||\n");
+printf("|||| %.0f||| %.0f |||/*\\||||\n", sorteio1, sorteio2, sorteio3);
+printf("|||| ||| ||| ||||\n");
+printf("|####################|\n");
+printf("|--------------------|\n");
+printf("|**Dinheiroooooooo***|\n");
+printf("|#########%d##########|\n",ptsj);
+printf("|--------------------|\n");
+getch();
+system("cls");
+
+//
+    mat[1][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+//
+
+printf("\n   /================\\ \n");
+printf(" / Caça niquel LUIZ \\\n");
+printf("|====================|\n");
+printf("|####################|\n");
+printf("|||| ||| ||| ||||\n");
+printf("|||| %.0f||| %.0f ||| %.0f||||\n", sorteio1, sorteio2, sorteio3);
+printf("|||| ||| ||| ||||\n");
+printf("|####################|\n");
+printf("|--------------------|\n");
+printf("|**Dinheiroooooooo***|\n");
+printf("|#########$##########|\n",ptsj);
+printf("|--------------------|\n");
+
+
+if(sorteio1 == sorteio2 && sorteio1 == sorteio3 && sorteio2 == sorteio3)
+{ 
+ptsj+=7000;
+printf("\nParabens, voce e uma pessoa de sorte, ganhou R$7.000");
+}
+else
+{
+if((sorteio1 != sorteio2 && sorteio2 == sorteio3) || (sorteio1 == sorteio2 && sorteio1 != sorteio3) || (sorteio1 != sorteio3 && sorteio1 == sorteio3))
+{ptsj+=3500;
+printf("\nNao acertou todos! Ganhou R$3.500");
+}else{
+if(sorteio1 != sorteio2 && sorteio2 != sorteio3 && sorteio1 != sorteio3)
+ptsj+=1500;
+printf("\nVoce nao acertou a combinacao !\n");
+printf("Mas ganhou um premio de consolacao, melhor do que nada ! Ganhou R$1.500");
+}
+}
+getch();
+system("cls");
+}
+}
+
+if(posj==31){
+    mat[5][0]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce achou um celular no chao!Deseja intregar ao dono?\n");
+  printf("1 = Sim, 2 = Nao");
+    scanf("%f", &op);
+    if(op==1){
+    ptsj+=2000;
+  printf("O dono esta agradecido por recuperar seus contatos, e te pagou R$2.000\n");
+}
+else
+{printf("Droga, ele esta queimado, mas voce vendeu ele como sucata por R$200");
+ptsj+=200;
+    }
+   
+    getch();
+    system("cls");
+}
+
+if(posj==32){
+     mat[5][1]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce nao pagou a mensalidade da Unifran em dia !\n");
+    ptsj-=500;
+  printf("A Unifran te cobrou R$500 de multa :):)\n\n");
+  
+    getch();
+    system("cls");
+}
+
+if(posj==33){
+    mat[5][2]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce vendeu a ninhada de cachorros de raca, que sua mulher tinha !\n");
+    ptsj+=900;
+  printf("Seu lucro eh de 3xR$300 !\n\n");
+   
+    getch();
+    system("cls");
+}
+
+if(posj==34){
+     mat[5][3]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce comprou um MacBook !\n");
+    ptsj-=3000;
+  printf("\nMas infelizmente os trabalhadores da china estavao em greve e voce pagou mais caro por isso !(\n");
+  printf("\nPreco pago R$3.000\n\n");
+  
+    getch();
+    system("cls");
+}
+
+if(posj==35){
+    mat[5][4]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce vendeu sua casa no suburbio!\n");
+    ptsj+=10000;
+  printf("\nPena que era ela de madeira e papelao, o comprador pagou R$10.000\n\n");
+   
+    getch();
+    system("cls");
+}
+
+if(posj==36){
+    mat[5][5]='X';
+                     for(i = 0; i < 6; i++){
+            for(j=0 ; j < 6; j++){
+              printf("%c \t",mat[i][j]);      
+             }     
+             printf("\n"); 
+             printf("\n"); 
+    }
+  printf("\nVoce vendeu seu computador !\n");
+    ptsj+=100;
+  printf("Pena que ele era mais lento que uma tartaruga paralitica e voce so ganhou R$100\n\n");
+   
+    getch();
+    system("cls");
+}
+
+// Fim dos if
+
+posj+=(rand()%2)+1;
+
+op = 0;
+
+
+}
+
+
+
+while(posj<=37);
+
+printf("                              ####### ### #     #\n");
+printf("                              #        #  ##   ##\n");
+printf("                              #        #  # # # #\n");
+printf("                              #####    #  #  #  #\n");
+printf("                              #        #  #     #\n");
+printf("                              #        #  #     #\n");
+printf("                              #       ### #     #\n");
+
+
+printf("\n\nAperte enter para ver o Resultado !\n\n");
+
+  getch();
+  system("cls");
+
+if(ptsj<0)
+{
+printf("Que pena voce perdeu =/");
+printf("\n\nSaldo = R$%.0f", ptsj);
+}
+else{
+printf("PARABENS !!!  Voce Ganhou !!!");
+printf("\n\nSaldo = R$%.0f", ptsj);
+}
+getch();
+}
+
+
